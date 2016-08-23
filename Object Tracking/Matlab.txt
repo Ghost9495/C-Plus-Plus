@@ -1,0 +1,21 @@
+i = importdata('E:\(Project) Object Tracking\Visual Studio Project\Draft\Draft\TimeStamp.txt')
+j = importdata('E:\(Project) Object Tracking\Visual Studio Project\Draft\Draft\Displacement.txt')
+
+plot(i,j)
+grid on
+
+
+
+indexmin = find(min(j) == j);
+xmin = i(indexmin);
+ymin = j(indexmin);
+
+indexmax = find(max(j) == j);
+xmax = i(indexmax);
+ymax = j(indexmax);
+
+strmin = ['Minimum = ',num2str(ymin)];
+text(xmin,ymin,strmin,'HorizontalAlignment','left');
+
+strmax = ['Maximum = ',num2str(ymax)];
+text(xmax,ymax,strmax,'HorizontalAlignment','right');
